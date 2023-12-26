@@ -39,3 +39,53 @@
     opacity: 1;
   }
 }
+
+.head-text {
+  background: linear-gradient(90deg, #FFF 45%, #474747 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    -webkit-animation: text-shadow-pop-top 0.6s both;
+            animation: text-shadow-pop-top 0.6s both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.glow {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #fff 0%,
+    #ebe0e0 29%,
+    #474747 67%,
+    #ffffff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.gradient-bg {
+  background: linear-gradient(164deg, rgba(180, 9, 236, 0.20) 38.95%, rgba(54, 9, 236, 0.20) 92.27%);
+}

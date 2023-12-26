@@ -32,10 +32,10 @@ const Navbar = () => {
         },
     ]
   return (
-    <nav className='px-0 lg:px-16 w-full font-inter flex items-center justify-between py-6'>
+    <nav className='px-0 xl:px-16 lg:px-2 w-full font-inter flex items-center justify-between py-6'>
         <h2 className='text-[16px] flex items-center justify-start md:basis-1/4  basis-2/4 md:text-[17px] lg:text-[20px] font-bold md:mr-3 lg:mr-0'>Teaser Name</h2>
 
-        <ul className='hidden list-none text-[16px] md:text-[14px] lg:text-[16px] cursor-pointer gap-6 md:gap-3 md:flex basis-2/4 items-center justify-center'>
+        <ul className='hidden list-none text-[16px] md:text-[14px] lg:text-[16px] cursor-pointer gap-6 md:gap-3 lg:gap-6 md:flex basis-2/4 items-center justify-center'>
             {navLinks.map((navLink, index) => (
                 <li key={navLink.id} className={`hover:text-pink-500 hover:underline transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${active === navLink.title ? "text-zinc-600" : "text-white"}`}
                 onClick={() => setActive(navLink.title)}
@@ -50,7 +50,7 @@ const Navbar = () => {
             <button className='hover:text-pink-500 flex items-center justify-center py-2 px-4 lg:px-8 rounded-full bg-[#171717] cursor-pointer' type='button'>Sign Up</button>
         </div>
 
-        <div className='flex md:hidden flex-1 justify-end items-center'>
+        <div className='flex md:hidden flex-1 justify-end items-center z-10'>
         <span onClick={() => setToggle(!toggle)}> {toggle ? <MdClose className='cursor-pointer' size={28} /> : <MdMenuOpen className='cursor-pointer' size={28} />} </span>
 
         <div className={`${!toggle ? "hidden" : "flex" }  px-8 flex-col py-6 absolute top-20 bg-slate-300 right-0 mx-8 my-2 min-w-[40%] rounded-xl sidebar`}>

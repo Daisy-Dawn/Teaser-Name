@@ -4,13 +4,13 @@ import {Hero, Blog, FAQ, About, Services, Solution, Navbar, Footer} from './comp
 function App() {
 
   return (
-    <div className=' bg-black text-white px-20'>
+    <div className=' bg-black text-white lg:px-20 px-5 '>
       <Navbar />
       <Hero />
       <Services />
       <Solution />
       <FAQ />
-      <About />
+      {/* <About /> */}
       <Blog />
       <Footer />
     </div>
